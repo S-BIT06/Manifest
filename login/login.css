@@ -1,0 +1,169 @@
+.auth-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  display: none;
+  width: min(440px, 100%);
+  padding: 44px 40px 36px;
+  animation: cardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.auth-card.active {
+  display: block;
+}
+
+.auth-card.wide {
+  width: min(560px, 100%);
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.brand-name {
+  font-size: 32px;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.form-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.mini-heading {
+  margin: 8px 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  color: white;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 48px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--soft-text);
+  font-size: 16px;
+}
+
+.phone-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 14px;
+}
+
+.strength-bar {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.strength-seg {
+  flex: 1;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.strength-seg.weak {
+  background: var(--error);
+}
+
+.strength-seg.medium {
+  background: var(--warning);
+}
+
+.strength-seg.strong {
+  background: var(--success);
+}
+
+.strength-label {
+  font-size: 11px;
+  color: var(--soft-text);
+  margin-top: 4px;
+  text-align: right;
+  min-height: 16px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: var(--soft-text);
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-color);
+}
+
+@media (max-width: 540px) {
+  .auth-card {
+    padding: 32px 22px 28px;
+    border-radius: 22px;
+  }
+
+  .brand-name {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+
+  .address-grid,
+  .phone-row {
+    grid-template-columns: 1fr;
+  }
+}

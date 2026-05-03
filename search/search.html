@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest — Search</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../common/manifest.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="page">
+    <header class="page-title">
+      <h1>Search Manifest</h1>
+      <p id="resultInfo">Find the gadget you manifested.</p>
+    </header>
+
+    <main class="search-container">
+      <form class="search-panel glass-card" id="searchForm">
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Mobile Phone">Mobile Phone</option>
+          <option value="Wireless Earphones">Wireless Earphones</option>
+          <option value="Wired Earphones">Wired Earphones</option>
+          <option value="Smart Watch">Smart Watch</option>
+        </select>
+
+        <input type="search" id="searchInput" placeholder="Search by name, model, specs..." autocomplete="off">
+        <button type="submit" class="btn-primary">Search</button>
+      </form>
+
+      <section class="results-grid" id="resultsGrid"></section>
+    </main>
+  </div>
+
+  <script src="../common/products.js"></script>
+  <script src="../common/storage.js"></script>
+  <script src="../common/nav.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

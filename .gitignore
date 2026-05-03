@@ -1,0 +1,8 @@
+node_modules/
+manifest-win32-x64/
+*.dll
+*.exe
+*.pak
+*.bin
+build/
+dist/

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest — Profile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../common/manifest.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="page">
+    <header class="page-title">
+      <h1>Your Profile</h1>
+      <p>Your Manifest identity, address and order history.</p>
+    </header>
+
+    <main class="profile-container">
+      <section class="profile-card glass-card" id="profileCard"></section>
+      <section class="orders-card glass-card" id="ordersCard"></section>
+    </main>
+  </div>
+
+  <script src="../common/products.js"></script>
+  <script src="../common/storage.js"></script>
+  <script src="../common/nav.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

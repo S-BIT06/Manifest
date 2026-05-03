@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest — Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../common/manifest.css">
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="page">
+    <header class="top-bar">
+      <div class="brand-box">
+        <h1 class="brand-name">Manifest</h1>
+        <p class="tagline">“Your Vision. Our Gadgets. Manifested.”</p>
+        <p class="welcome-line" id="welcomeLine">Welcome to Manifest</p>
+      </div>
+
+      <form class="search-form" id="searchForm">
+        <select id="categoryFilter" class="filter-bar">
+          <option value="all">All</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Mobile Phone">Mobile Phone</option>
+          <option value="Wireless Earphones">Wireless Earphones</option>
+          <option value="Wired Earphones">Wired Earphones</option>
+          <option value="Smart Watch">Smart Watch</option>
+        </select>
+
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search gadgets..."
+          autocomplete="off"
+        >
+
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </header>
+
+    <main class="content">
+      <section class="products-section">
+        <div class="section-heading">
+          <h2>Featured Gadgets</h2>
+          <p>4 gadgets are visible at a time. Use the arrows to scroll.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="nav-button" id="prevBtn" aria-label="Scroll Left">&#10094;</button>
+
+          <div class="products-viewport">
+            <div class="product-track" id="productTrack"></div>
+          </div>
+
+          <button class="nav-button" id="nextBtn" aria-label="Scroll Right">&#10095;</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../common/products.js"></script>
+  <script src="../common/storage.js"></script>
+  <script src="../common/nav.js"></script>
+  <script src="homepage.js"></script>
+</body>
+</html>

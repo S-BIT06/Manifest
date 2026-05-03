@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest — Cart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../common/manifest.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="page">
+    <header class="page-title">
+      <h1>Your Cart</h1>
+      <p>Selected gadgets gather here before becoming reality.</p>
+    </header>
+
+    <main class="cart-container">
+      <section id="cartList" class="cart-list"></section>
+
+      <section class="cart-summary glass-card">
+        <div>
+          <span>Total Amount</span>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+        <button class="btn-primary" id="payNowBtn">Pay Now</button>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-box">
+      <h2>Choose Payment</h2>
+      <p>Select how you want to complete your Manifest order.</p>
+
+      <label class="radio-card">
+        <input type="radio" name="paymentMethod" value="Pay on Delivery" checked>
+        Pay on Delivery
+      </label>
+
+      <label class="radio-card">
+        <input type="radio" name="paymentMethod" value="UPI">
+        UPI
+      </label>
+
+      <div class="modal-actions">
+        <button class="btn-ghost" id="cancelPaymentBtn">Cancel</button>
+        <button class="btn-primary" id="continuePaymentBtn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="upiModal">
+    <div class="modal-box">
+      <h2>Choose UPI App</h2>
+      <p>Pick a UPI option to complete the payment.</p>
+
+      <label class="radio-card">
+        <input type="radio" name="upiApp" value="GPay" checked>
+        GPay
+      </label>
+
+      <label class="radio-card">
+        <input type="radio" name="upiApp" value="Paytm">
+        Paytm
+      </label>
+
+      <label class="radio-card">
+        <input type="radio" name="upiApp" value="PhonePe">
+        PhonePe
+      </label>
+
+      <div class="modal-actions">
+        <button class="btn-ghost" id="backToPaymentBtn">Back</button>
+        <button class="btn-primary" id="upiPayBtn">Pay</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box success-box">
+      <div class="success-mark">✨</div>
+      <h2>Payment Successful</h2>
+      <p>Your Manifest order has been placed. The cart is now cleared and your order is saved in your profile.</p>
+      <button class="btn-primary" id="successHomeBtn">Go to Home</button>
+    </div>
+  </div>
+
+  <script src="../common/products.js"></script>
+  <script src="../common/storage.js"></script>
+  <script src="../common/nav.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

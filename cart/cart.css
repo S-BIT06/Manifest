@@ -1,0 +1,143 @@
+.cart-container {
+  width: min(980px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.cart-list {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 26px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--line-color);
+}
+
+.cart-item .product-visual-common {
+  height: 110px;
+  border-radius: 18px;
+}
+
+.cart-item .product-svg {
+  width: 78px;
+  height: 78px;
+}
+
+.cart-info h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.cart-model,
+.cart-category {
+  color: var(--soft-text);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cart-actions {
+  display: grid;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.quantity-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.quantity-wrap label {
+  color: var(--soft-text);
+  font-size: 13px;
+}
+
+.quantity-input {
+  width: 70px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--line-color);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  outline: none;
+}
+
+.subtotal {
+  text-align: right;
+  font-weight: 800;
+}
+
+.cart-summary {
+  position: sticky;
+  bottom: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+}
+
+.cart-summary span {
+  display: block;
+  color: var(--soft-text);
+  margin-bottom: 5px;
+}
+
+.cart-summary strong {
+  font-size: 26px;
+}
+
+.empty-cart {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 26px;
+}
+
+.empty-cart h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.empty-cart p {
+  color: var(--soft-text);
+  margin-bottom: 20px;
+}
+
+.success-box {
+  text-align: center;
+}
+
+.success-mark {
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 760px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-actions,
+  .quantity-wrap,
+  .subtotal {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}

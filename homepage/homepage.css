@@ -1,0 +1,272 @@
+.top-bar {
+  position: relative;
+  min-height: 205px;
+  padding: 24px 36px 0;
+}
+
+.brand-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.brand-name {
+  font-size: 54px;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.welcome-line {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 14px;
+}
+
+.search-form {
+  position: absolute;
+  top: 20px;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.86);
+  border: 1px solid var(--line-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.filter-bar,
+.search-input,
+.search-button {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.filter-bar {
+  min-width: 150px;
+  padding: 12px 14px;
+  background: #131320;
+  color: white;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 220px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.search-button {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+  color: #050505;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+}
+
+.content {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.products-section {
+  padding-top: 10px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.section-heading p {
+  color: var(--soft-text);
+  font-size: 15px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.products-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-track {
+  display: flex;
+  gap: var(--gap);
+  transition: transform 0.45s ease;
+}
+
+.product-card {
+  flex: 0 0 calc((100% - (var(--cards-per-view) - 1) * var(--gap)) / var(--cards-per-view));
+  min-height: 360px;
+  padding: 16px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.28);
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(119, 247, 255, 0.35);
+}
+
+.product-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 14px 0 4px;
+}
+
+.product-model {
+  color: var(--soft-text);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: var(--soft-text);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 42px;
+}
+
+.product-footer {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.25s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1180px) {
+  .top-bar {
+    min-height: 230px;
+  }
+
+  .brand-name {
+    font-size: 48px;
+  }
+
+  .tagline {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 960px) {
+  .search-form {
+    position: static;
+    width: fit-content;
+    margin: 20px auto 0;
+    justify-content: center;
+  }
+
+  .top-bar {
+    min-height: 275px;
+  }
+}
+
+@media (max-width: 540px) {
+  .top-bar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .brand-name {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+
+  .search-form {
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .filter-bar,
+  .search-input,
+  .search-button {
+    width: 100%;
+  }
+
+  .content {
+    width: min(100%, calc(100% - 18px));
+  }
+
+  .carousel-wrapper {
+    gap: 8px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+}

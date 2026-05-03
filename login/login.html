@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifest — Login</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../common/manifest.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="auth-page">
+
+    <section class="auth-card glass-card active" id="loginView">
+      <div class="brand">
+        <h1 class="brand-name">Manifest</h1>
+        <p class="tagline">“Your Vision. Our Gadgets. Manifested.”</p>
+      </div>
+
+      <h2 class="form-title">Welcome back</h2>
+
+      <div class="field">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+        <div class="err-msg" id="loginEmailErr"></div>
+      </div>
+
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+          <button type="button" class="eye-btn" id="loginEye">👁</button>
+        </div>
+        <div class="err-msg" id="loginPasswordErr"></div>
+      </div>
+
+      <button class="btn-primary full-btn" id="loginBtn">Sign In</button>
+
+      <div class="divider">or</div>
+
+      <button class="btn-ghost full-btn" id="goSignupBtn">Create an Account</button>
+    </section>
+
+    <section class="auth-card glass-card wide" id="signupView">
+      <div class="brand">
+        <h1 class="brand-name">Manifest</h1>
+        <p class="tagline">Join the future of gadgets</p>
+      </div>
+
+      <h2 class="form-title">Create your account</h2>
+
+      <div class="field">
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" placeholder="E.g. Arjun Sharma" autocomplete="name">
+        <div class="err-msg" id="signupNameErr"></div>
+      </div>
+
+      <div class="field">
+        <label for="signupEmail">Email Address</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+        <div class="err-msg" id="signupEmailErr"></div>
+      </div>
+
+      <div class="field">
+        <label>Phone Number</label>
+        <div class="phone-row">
+          <select id="dialCode">
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+86">🇨🇳 +86</option>
+            <option value="+971">🇦🇪 +971</option>
+          </select>
+          <input type="tel" id="signupPhone" placeholder="Phone number" autocomplete="tel">
+        </div>
+        <div class="err-msg" id="signupPhoneErr"></div>
+      </div>
+
+      <h3 class="mini-heading">Address Details</h3>
+
+      <div class="field">
+        <label for="signupCountry">Country</label>
+        <select id="signupCountry">
+          <option value="">Select country</option>
+          <option value="India">🇮🇳 India</option>
+          <option value="United States">🇺🇸 United States</option>
+          <option value="United Kingdom">🇬🇧 United Kingdom</option>
+          <option value="Australia">🇦🇺 Australia</option>
+          <option value="Germany">🇩🇪 Germany</option>
+          <option value="France">🇫🇷 France</option>
+          <option value="Japan">🇯🇵 Japan</option>
+          <option value="China">🇨🇳 China</option>
+          <option value="United Arab Emirates">🇦🇪 United Arab Emirates</option>
+        </select>
+        <div class="err-msg" id="signupCountryErr"></div>
+      </div>
+
+      <div class="address-grid">
+        <div class="field">
+          <label for="signupState">State</label>
+          <input type="text" id="signupState" placeholder="Enter state">
+          <div class="err-msg" id="signupStateErr"></div>
+        </div>
+
+        <div class="field">
+          <label for="signupDistrict">District</label>
+          <input type="text" id="signupDistrict" placeholder="Enter district">
+          <div class="err-msg" id="signupDistrictErr"></div>
+        </div>
+
+        <div class="field">
+          <label for="signupPlace">Place</label>
+          <input type="text" id="signupPlace" placeholder="Enter place">
+          <div class="err-msg" id="signupPlaceErr"></div>
+        </div>
+
+        <div class="field">
+          <label for="signupPincode">Pincode / Postal Code</label>
+          <input type="text" id="signupPincode" placeholder="4 to 10 characters">
+          <div class="err-msg" id="signupPincodeErr"></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="signupPassword">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="signupPassword" placeholder="Min 6 chars · 1 upper · 1 number · 1 special" autocomplete="new-password">
+          <button type="button" class="eye-btn" id="signupEye">👁</button>
+        </div>
+        <div class="strength-bar">
+          <div class="strength-seg" id="seg1"></div>
+          <div class="strength-seg" id="seg2"></div>
+          <div class="strength-seg" id="seg3"></div>
+        </div>
+        <div class="strength-label" id="strengthLabel"></div>
+        <div class="err-msg" id="signupPasswordErr"></div>
+      </div>
+
+      <div class="field">
+        <label for="signupConfirm">Confirm Password</label>
+        <div class="password-wrap">
+          <input type="password" id="signupConfirm" placeholder="Re-enter password" autocomplete="new-password">
+          <button type="button" class="eye-btn" id="confirmEye">👁</button>
+        </div>
+        <div class="err-msg" id="signupConfirmErr"></div>
+      </div>
+
+      <button class="btn-primary full-btn" id="signupBtn">Create Account</button>
+
+      <div class="divider">or</div>
+
+      <button class="btn-ghost full-btn" id="goLoginBtn">Already have an account? Sign In</button>
+    </section>
+
+  </div>
+
+  <script src="../common/storage.js"></script>
+  <script src="../common/nav.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
